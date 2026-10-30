@@ -1,0 +1,35 @@
+<!-- ================= EVENTS (3D Circular Carousel) ================= -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-end justify-between gap-6 mb-4 sm:mb-6 reveal">
+    <div>
+      <p class="eyebrow text-gold-600 mb-3">Portofolio Event &amp; Kolaborasi</p>
+      <h2 class="h2 font-display font-semibold">Lebih dari<br /><span class="font-serif italic font-normal text-gold-600">sekadar sewa harian.</span></h2>
+    </div>
+    
+    <!-- Controls (Mobile + Desktop) -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs sm:text-sm text-night/60 hidden sm:inline">Putar / Geser 3D</span>
+      <div class="flex gap-2">
+        <button type="button" id="events-prev" aria-label="Putar ke kiri" class="w-10 h-10 rounded-full bg-sand hover:bg-night hover:text-cream border border-night/10 flex items-center justify-center transition-colors">
+          ←
+        </button>
+        <button type="button" id="events-next" aria-label="Putar ke kanan" class="w-10 h-10 rounded-full bg-sand hover:bg-night hover:text-cream border border-night/10 flex items-center justify-center transition-colors">
+          →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative w-full h-[440px] sm:h-[540px]">
+    <div id="events-circular-carousel" class="circular-carousel" role="region" aria-roledescription="carousel" aria-label="Portofolio Event dan Kolaborasi Goldstone" tabindex="0">
+      <div class="circular-carousel__view">
+        <div class="circular-carousel__stage">
+          <div class="circular-carousel__camera">
+            <div class="circular-carousel__ring"></div>
+          </div>
+        </div>
+      </div>
+      <div class="circular-carousel__live" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </div>
+</section>

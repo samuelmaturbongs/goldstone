@@ -1,0 +1,114 @@
+<!-- ================= HERO ================= -->
+<section class="relative bg-night text-cream grain overflow-hidden rounded-b-[40px] lg:rounded-b-[64px]">
+  <!-- Layered hero background: stadium photo + pitch-green / gold mesh + pitch lines -->
+  <div aria-hidden="true" class="absolute inset-x-0 top-0 h-[78%] md:h-[70%] pointer-events-none">
+    <img src="assets/images/img_2.jpg" alt="" width="1600" height="1067"
+         fetchpriority="high" class="hero-photo absolute inset-0 w-full h-full object-cover opacity-50 md:opacity-35" />
+    <div class="absolute inset-0 bg-gradient-to-b from-night/40 via-night/30 to-night"></div>
+  </div>
+  <div aria-hidden="true" class="absolute -top-24 -left-24 w-[520px] h-[520px] rounded-full bg-emerald-600/35 blur-[110px] pointer-events-none"></div>
+  <div aria-hidden="true" class="absolute top-24 -right-20 w-[360px] h-[360px] rounded-full bg-gold-400/30 blur-[100px] pointer-events-none"></div>
+  <svg aria-hidden="true" viewBox="0 0 400 400" class="absolute left-1/2 top-40 -translate-x-1/2 w-[640px] max-w-none opacity-[0.12] pointer-events-none">
+    <g fill="none" stroke="#F1D98E" stroke-width="1.5">
+      <circle cx="200" cy="200" r="90" /><circle cx="200" cy="200" r="3" fill="#F1D98E" />
+      <line x1="-400" y1="200" x2="800" y2="200" />
+    </g>
+  </svg>
+
+  <!-- Floating nav -->
+  <header class="relative z-30 px-4 sm:px-6 pt-5">
+    <nav aria-label="Navigasi utama" class="max-w-7xl mx-auto flex items-center justify-between gap-4 rounded-full bg-white/[0.06] backdrop-blur-xl border border-white/10 pl-5 pr-2 py-2">
+      <a href="#" class="flex items-center py-0.5" aria-label="Goldstone Arena">
+        <img src="assets/images/goldstone-logo-horizontal.png" alt="Goldstone Arena" width="220" height="80" class="h-8 sm:h-9 w-auto object-contain" />
+      </a>
+      <ul class="hidden lg:flex items-center gap-1 text-sm text-cream/70">
+        <li><a href="#ekosistem" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Ekosistem</a></li>
+        <li><a href="#fasilitas" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Fasilitas</a></li>
+        <li><a href="#jadwal" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Pricelist &amp; Jadwal</a></li>
+        <li><a href="#social-house" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Social House</a></li>
+        <li><a href="#lokasi" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Lokasi</a></li>
+      </ul>
+      <a href="#ekosistem" class="hidden sm:inline-flex bg-gold-grad text-night text-sm font-semibold px-5 py-2.5 rounded-full hover:brightness-110 transition">Jelajahi</a>
+      <a href="#ekosistem" class="sm:hidden text-xs font-semibold px-4 py-2 rounded-full border border-white/20 text-cream hover:bg-white/10 transition">Jelajahi</a>
+    </nav>
+  </header>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-16 lg:pt-28 pb-24 lg:pb-32">
+    <!-- Headline with inline image capsules -->
+    <div class="flex items-center gap-3 mb-8">
+      <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+      <p class="eyebrow text-cream/70">Pusat Sportainment &amp; Kuliner Terpadu · Timika, Papua Tengah</p>
+    </div>
+
+    <h1 class="hero-type font-display font-semibold max-w-6xl">
+      <span class="blur-word" style="animation-delay: 80ms">Sewa</span>
+      <span class="blur-word" style="animation-delay: 160ms">lapangan</span>
+      <span class="blur-word" style="animation-delay: 240ms"><img class="pill-img" src="assets/images/img_11.jpg" alt="" width="400" height="190" /></span>
+      <span class="blur-word" style="animation-delay: 320ms">main</span>
+      <span class="blur-word" style="animation-delay: 400ms">padel</span>
+      <span class="blur-word" style="animation-delay: 480ms"><img class="pill-img" src="assets/images/img_13.jpg" alt="" width="400" height="190" /></span>
+      <br class="hidden md:block" />
+      <span class="blur-word" style="animation-delay: 560ms">&amp;</span>
+      <span class="blur-word" style="animation-delay: 640ms">kulineran</span>
+      <span class="blur-word" style="animation-delay: 720ms"><img class="pill-img" src="assets/images/img_3.jpg" alt="" width="400" height="190" /></span>
+      <span class="blur-word" style="animation-delay: 800ms">di</span>
+      <span class="blur-word" style="animation-delay: 880ms">satu</span>
+      <span class="blur-word" style="animation-delay: 960ms"><span class="font-serif italic font-normal text-gold-grad">destinasi.</span></span>
+    </h1>
+
+    <div class="mt-10 flex flex-wrap items-center gap-3">
+      <a href="#jadwal" class="group inline-flex items-center gap-4 bg-cream text-night pl-7 pr-2 py-2 rounded-full font-semibold w-fit hover:bg-gold-300 transition-colors shrink-0">
+        Cek jadwal lapangan
+        <span class="w-11 h-11 rounded-full bg-night text-gold-300 grid place-items-center group-hover:rotate-45 transition-transform">↓</span>
+      </a>
+      <a href="#ekosistem" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 hover:border-gold-400 text-cream text-sm font-medium transition-colors">
+        Jelajahi ekosistem <span class="text-xs text-gold-300">→</span>
+      </a>
+    </div>
+
+    <!-- Rotating badge -->
+    <div aria-hidden="true" class="hidden lg:block absolute right-8 top-28 w-36 h-36">
+      <svg viewBox="0 0 200 200" class="spin-slow w-full h-full">
+        <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+        <text font-size="15.5" letter-spacing="5" fill="#E2C064" font-family="Inter Tight" font-weight="600">
+          <textPath href="#circle">GOLDSTONE • ARENA • SOCIAL PADEL • TIMIKA •</textPath>
+        </text>
+      </svg>
+      <div class="absolute inset-0 grid place-items-center">
+        <img src="assets/images/goldstone-emblem.png" alt="Logo Goldstone Arena" width="64" height="64" class="w-16 h-16 object-contain drop-shadow-lg" />
+      </div>
+    </div>
+
+    <!-- Social Media Icons (Pojok Kanan Hero, Berjejer ke Atas) -->
+    <div aria-label="Media Sosial Goldstone" class="absolute right-4 sm:right-6 lg:right-8 bottom-24 sm:bottom-28 z-20 flex flex-col items-center gap-2">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/goldstonearena/" target="_blank" rel="noopener noreferrer"
+         aria-label="Instagram @goldstonearena" title="Instagram @goldstonearena"
+         class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] backdrop-blur-md border border-white/15 text-cream/75 hover:text-night hover:bg-gold-300 hover:border-gold-300 grid place-items-center transition-all">
+        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@goldstonearena" target="_blank" rel="noopener noreferrer"
+         aria-label="TikTok @goldstonearena" title="TikTok @goldstonearena"
+         class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] backdrop-blur-md border border-white/15 text-cream/75 hover:text-night hover:bg-gold-300 hover:border-gold-300 grid place-items-center transition-all">
+        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.52a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.25a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.05a8.27 8.27 0 0 0 4.91 1.6V7.2a4.83 4.83 0 0 1-1-.51z"></path>
+        </svg>
+      </a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/search/top?q=Goldstone%20Arena%20Timika" target="_blank" rel="noopener noreferrer"
+         aria-label="Facebook Goldstone Arena" title="Facebook Goldstone Arena"
+         class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] backdrop-blur-md border border-white/15 text-cream/75 hover:text-night hover:bg-gold-300 hover:border-gold-300 grid place-items-center transition-all">
+        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"></path>
+        </svg>
+      </a>
+      <span aria-hidden="true" class="w-px h-6 bg-white/20 mt-0.5"></span>
+    </div>
+  </div>
+
+</section>

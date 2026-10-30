@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0C09" />
+  <title>Goldstone Timika — Mini Soccer, Social Padel &amp; Social House</title>
+  <meta name="description" content="Goldstone Arena (mini soccer 64×44 m standar FIFA), Goldstone Social Padel, dan Goldstone Social House di Jl. Hasanuddin Baru (Irigasi Ujung), Timika, Papua Tengah. Cek jadwal kosong &amp; booking via WhatsApp 0812-8080-9212." />
+
+  <!-- Favicon (Logo Resmi Goldstone Arena) -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/goldstone-logo.png" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="Goldstone Arena &amp; Social House Timika" />
+  <meta property="og:title" content="Goldstone Timika — Mini Soccer 64×44m, Social Padel &amp; Social House" />
+  <meta property="og:description" content="Lapangan Mini Soccer 64×44 m rumput FIFA, Social Padel &amp; Coffee Shop/Resto di Jl. Hasanuddin Baru (Irigasi Ujung), Timika. Cek jadwal &amp; pricelist resmi." />
+  <meta property="og:image" content="assets/images/lapangan.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Goldstone Timika — Mini Soccer, Social Padel &amp; Social House" />
+  <meta name="twitter:description" content="Lapangan Mini Soccer 64×44 m rumput FIFA, Social Padel &amp; Social House di Timika, Papua Tengah." />
+  <meta name="twitter:image" content="assets/images/lapangan.jpeg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS & Configurations -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-cream text-night font-sans antialiased selection:bg-gold-500 selection:text-night">
+
+  <!-- ================= SECTIONS ================= -->
+  <!-- ================= HERO ================= -->
+<section class="relative bg-night text-cream grain overflow-hidden rounded-b-[40px] lg:rounded-b-[64px]">
+  <!-- Layered hero background: stadium photo + pitch-green / gold mesh + pitch lines -->
+  <div aria-hidden="true" class="absolute inset-x-0 top-0 h-[78%] md:h-[70%] pointer-events-none">
+    <img src="assets/images/img_2.jpg" alt="" width="1600" height="1067"
+         fetchpriority="high" class="hero-photo absolute inset-0 w-full h-full object-cover opacity-50 md:opacity-35" />
+    <div class="absolute inset-0 bg-gradient-to-b from-night/40 via-night/30 to-night"></div>
+  </div>
+  <div aria-hidden="true" class="absolute -top-24 -left-24 w-[520px] h-[520px] rounded-full bg-emerald-600/35 blur-[110px] pointer-events-none"></div>
+  <div aria-hidden="true" class="absolute top-24 -right-20 w-[360px] h-[360px] rounded-full bg-gold-400/30 blur-[100px] pointer-events-none"></div>
+  <svg aria-hidden="true" viewBox="0 0 400 400" class="absolute left-1/2 top-40 -translate-x-1/2 w-[640px] max-w-none opacity-[0.12] pointer-events-none">
+    <g fill="none" stroke="#F1D98E" stroke-width="1.5">
+      <circle cx="200" cy="200" r="90" /><circle cx="200" cy="200" r="3" fill="#F1D98E" />
+      <line x1="-400" y1="200" x2="800" y2="200" />
+    </g>
+  </svg>
+
+  <!-- Floating nav -->
+  <header class="relative z-30 px-4 sm:px-6 pt-5">
+    <nav aria-label="Navigasi utama" class="max-w-7xl mx-auto flex items-center justify-between gap-4 rounded-full bg-white/[0.06] backdrop-blur-xl border border-white/10 pl-5 pr-2 py-2">
+      <a href="#" class="flex items-center py-0.5" aria-label="Goldstone Arena">
+        <img src="assets/images/goldstone-logo-horizontal.png" alt="Goldstone Arena" width="220" height="80" class="h-8 sm:h-9 w-auto object-contain" />
+      </a>
+      <ul class="hidden lg:flex items-center gap-1 text-sm text-cream/70">
+        <li><a href="#ekosistem" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Ekosistem</a></li>
+        <li><a href="#fasilitas" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Fasilitas</a></li>
+        <li><a href="#jadwal" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Pricelist &amp; Jadwal</a></li>
+        <li><a href="#social-house" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Social House</a></li>
+        <li><a href="#lokasi" class="px-4 py-2 rounded-full hover:bg-white/10 hover:text-cream transition-colors">Lokasi</a></li>
+      </ul>
+      <a href="#ekosistem" class="hidden sm:inline-flex bg-gold-grad text-night text-sm font-semibold px-5 py-2.5 rounded-full hover:brightness-110 transition">Jelajahi</a>
+      <a href="#ekosistem" class="sm:hidden text-xs font-semibold px-4 py-2 rounded-full border border-white/20 text-cream hover:bg-white/10 transition">Jelajahi</a>
+    </nav>
+  </header>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-16 lg:pt-28 pb-24 lg:pb-32">
+    <!-- Headline with inline image capsules -->
+    <div class="flex items-center gap-3 mb-8">
+      <span class="w-2 h-2 rounded-full bg-gold-400 animate-pulse"></span>
+      <p class="eyebrow text-cream/70">Pusat Sportainment &amp; Kuliner Terpadu · Timika, Papua Tengah</p>
+    </div>
+
+    <h1 class="hero-type font-display font-semibold max-w-6xl">
+      <span class="blur-word" style="animation-delay: 80ms">Sewa</span>
+      <span class="blur-word" style="animation-delay: 160ms">lapangan</span>
+      <span class="blur-word" style="animation-delay: 240ms"><img class="pill-img" src="assets/images/img_11.jpg" alt="" width="400" height="190" /></span>
+      <span class="blur-word" style="animation-delay: 320ms">main</span>
+      <span class="blur-word" style="animation-delay: 400ms">padel</span>
+      <span class="blur-word" style="animation-delay: 480ms"><img class="pill-img" src="assets/images/img_13.jpg" alt="" width="400" height="190" /></span>
+      <br class="hidden md:block" />
+      <span class="blur-word" style="animation-delay: 560ms">&amp;</span>
+      <span class="blur-word" style="animation-delay: 640ms">kulineran</span>
+      <span class="blur-word" style="animation-delay: 720ms"><img class="pill-img" src="assets/images/img_3.jpg" alt="" width="400" height="190" /></span>
+      <span class="blur-word" style="animation-delay: 800ms">di</span>
+      <span class="blur-word" style="animation-delay: 880ms">satu</span>
+      <span class="blur-word" style="animation-delay: 960ms"><span class="font-serif italic font-normal text-gold-grad">destinasi.</span></span>
+    </h1>
+
+    <div class="mt-10 flex flex-wrap items-center gap-3">
+      <a href="#jadwal" class="group inline-flex items-center gap-4 bg-cream text-night pl-7 pr-2 py-2 rounded-full font-semibold w-fit hover:bg-gold-300 transition-colors shrink-0">
+        Cek jadwal lapangan
+        <span class="w-11 h-11 rounded-full bg-night text-gold-300 grid place-items-center group-hover:rotate-45 transition-transform">↓</span>
+      </a>
+      <a href="#ekosistem" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 hover:border-gold-400 text-cream text-sm font-medium transition-colors">
+        Jelajahi ekosistem <span class="text-xs text-gold-300">→</span>
+      </a>
+    </div>
+
+    <!-- Rotating badge -->
+    <div aria-hidden="true" class="hidden lg:block absolute right-8 top-28 w-36 h-36">
+      <svg viewBox="0 0 200 200" class="spin-slow w-full h-full">
+        <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+        <text font-size="15.5" letter-spacing="5" fill="#E2C064" font-family="Inter Tight" font-weight="600">
+          <textPath href="#circle">GOLDSTONE • ARENA • SOCIAL PADEL • TIMIKA •</textPath>
+        </text>
+      </svg>
+      <div class="absolute inset-0 grid place-items-center">
+        <img src="assets/images/goldstone-emblem.png" alt="Logo Goldstone Arena" width="64" height="64" class="w-16 h-16 object-contain drop-shadow-lg" />
+      </div>
+    </div>
+
+    <!-- Social Media Icons (Pojok Kanan Hero, Berjejer ke Atas) -->
+    <div aria-label="Media Sosial Goldstone" class="absolute right-4 sm:right-6 lg:right-8 bottom-24 sm:bottom-28 z-20 flex flex-col items-center gap-2">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/goldstonearena/" target="_blank" rel="noopener noreferrer"
+         aria-label="Instagram @goldstonearena" title="Instagram @goldstonearena"
+         class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] backdrop-blur-md border border-white/15 text-cream/75 hover:text-night hover:bg-gold-300 hover:border-gold-300 grid place-items-center transition-all">
+        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@goldstonearena" target="_blank" rel="noopener noreferrer"
+         aria-label="TikTok @goldstonearena" title="TikTok @goldstonearena"
+         class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] backdrop-blur-md border border-white/15 text-cream/75 hover:text-night hover:bg-gold-300 hover:border-gold-300 grid place-items-center transition-all">
+        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.52a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.25a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.05a8.27 8.27 0 0 0 4.91 1.6V7.2a4.83 4.83 0 0 1-1-.51z"></path>
+        </svg>
+      </a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/search/top?q=Goldstone%20Arena%20Timika" target="_blank" rel="noopener noreferrer"
+         aria-label="Facebook Goldstone Arena" title="Facebook Goldstone Arena"
+         class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/[0.06] backdrop-blur-md border border-white/15 text-cream/75 hover:text-night hover:bg-gold-300 hover:border-gold-300 grid place-items-center transition-all">
+        <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"></path>
+        </svg>
+      </a>
+      <span aria-hidden="true" class="w-px h-6 bg-white/20 mt-0.5"></span>
+    </div>
+  </div>
+
+</section>
+
+  <!-- ================= MARQUEE ================= -->
+<div class="relative -mt-6 z-20 py-8 overflow-hidden">
+  <div class="marquee -rotate-2 bg-gold-grad text-night py-4 shadow-xl" id="marquee">
+    <div class="marquee-track flex w-max gap-10 font-display font-bold text-2xl md:text-3xl tracking-tight whitespace-nowrap">
+      <span>MINI SOCCER</span><span>✦</span><span>SOCIAL PADEL</span><span>✦</span><span>COFFEE &amp; DINING</span><span>✦</span><span>TURNAMEN</span><span>✦</span><span>NOBAR</span><span>✦</span><span>GATHERING</span><span>✦</span>
+      <span aria-hidden="true">MINI SOCCER</span><span aria-hidden="true">✦</span><span aria-hidden="true">SOCIAL PADEL</span><span aria-hidden="true">✦</span><span aria-hidden="true">COFFEE &amp; DINING</span><span aria-hidden="true">✦</span><span aria-hidden="true">TURNAMEN</span><span aria-hidden="true">✦</span><span aria-hidden="true">NOBAR</span><span aria-hidden="true">✦</span><span aria-hidden="true">GATHERING</span><span aria-hidden="true">✦</span>
+    </div>
+  </div>
+  <button type="button" id="marquee-toggle" aria-pressed="false" class="absolute right-4 bottom-1 text-[11px] text-night/50 hover:text-night underline underline-offset-2">Jeda animasi</button>
+</div>
+
+  <!-- ================= SCROLL EXPAND (port vanilla dari react-bits ScrollExpand) ================= -->
+<section id="scroll-expand" class="scroll-expand bg-cream" aria-label="Lapangan Goldstone Arena">
+  <div class="scroll-expand__track">
+    <div class="scroll-expand__stage">
+      <div class="scroll-expand__frame">
+        <img class="scroll-expand__media" src="assets/images/lapangan.jpeg" alt="Lapangan mini soccer Goldstone Arena di bawah lampu malam" width="1200" height="800" loading="lazy" draggable="false" />
+        <div class="scroll-expand__scrim"></div>
+        <div class="scroll-expand__overlay">
+          <p class="eyebrow text-gold-300 mb-4">Goldstone Arena · @goldstonearena</p>
+          <h2 class="h2 font-display font-semibold text-cream">Kini <span class="font-serif italic font-normal text-gold-grad">lebih luas.</span></h2>
+          <p class="mt-5 text-cream/80 max-w-md mx-auto leading-relaxed text-sm sm:text-base">
+            Lega, terang, dan siap dipakai sampai malam.
+          </p>
+          <a href="#jadwal" class="mt-7 inline-flex items-center gap-3 bg-gold-grad text-night pl-6 pr-2 py-2 rounded-full font-semibold hover:brightness-110 transition">
+            Cek jadwal lapangan <span class="w-10 h-10 rounded-full bg-night text-gold-300 grid place-items-center">→</span>
+          </a>
+        </div>
+      </div>
+      <div class="scroll-expand__title">
+        <span class="eyebrow block mb-3 text-gold-300">Goldstone Arena</span>
+        Satu lapangan,<br /><span class="font-serif italic font-normal">siap tanding.</span>
+      </div>
+      <div class="scroll-expand__hint">Scroll untuk melihat lebih luas ↓</div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= EKOSISTEM ================= -->
+<section id="ekosistem" class="py-14 sm:py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 sm:mb-14 reveal">
+    <div>
+      <p class="eyebrow text-gold-600 mb-3">Mengenal Bisnis Goldstone Timika</p>
+      <h2 class="h2 font-display font-semibold max-w-2xl blur-text-view">
+        Olahraga kelas pro &amp; <span class="font-serif italic font-normal text-gold-600">ruang kumpul</span> dalam satu kawasan.
+      </h2>
+    </div>
+    <p data-readmore="text-gold-700" class="text-night/70 max-w-md leading-relaxed text-sm sm:text-base">
+      <strong class="text-night">Goldstone</strong> adalah kawasan olahraga dan gaya hidup terpadu di Timika. Kami menyewakan lapangan <strong>Mini Soccer &amp; Social Padel</strong> berstandar turnamen, dilengkapi <strong>Goldstone Social House</strong>—coffee shop &amp; restoran nyaman untuk keluarga, komunitas, dan rekan kerja.
+    </p>
+  </div>
+
+  <div id="eko-track" class="no-scrollbar flex lg:grid lg:grid-cols-3 gap-4 lg:gap-5 items-start overflow-x-auto lg:overflow-visible snap-x snap-mandatory scroll-smooth px-6 sm:px-8 lg:px-6 lg:max-w-7xl lg:mx-auto scroll-px-6 sm:scroll-px-8 pb-4 lg:pb-0 cursor-grab active:cursor-grabbing select-none">
+    <!-- Arena -->
+    <article class="reveal group shrink-0 w-[84vw] sm:w-[360px] lg:w-auto snap-center rounded-[32px] bg-night text-cream p-3 pb-7 shadow-md lg:shadow-none">
+      <div class="relative rounded-[24px] overflow-hidden aspect-[4/5]">
+        <img src="assets/images/lapangan.jpeg" alt="Lapangan mini soccer Goldstone Arena" loading="lazy" draggable="false" width="900" height="1125" class="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-700" />
+        <span class="absolute top-4 left-4 font-display font-bold text-5xl text-cream/90">01</span>
+        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-night/75 backdrop-blur text-[11px] font-medium text-gold-300 border border-white/15">Sewa Lapangan Bola</span>
+      </div>
+      <div class="px-4 pt-6">
+        <p class="text-xs font-semibold uppercase tracking-wider text-gold-400">Unit Sport Venue · @goldstonearena</p>
+        <h3 class="font-display text-2xl font-semibold mt-1">Goldstone Arena</h3>
+        <p data-readmore="text-gold-300" class="mt-2.5 text-cream/70 text-sm leading-relaxed">
+          Pusat penyewaan lapangan <strong>Mini Soccer 64 × 44 meter</strong> berstandar turnamen di Timika. Melayani sewa reguler per jam untuk fun match komunitas, latihan rutin instansi, hingga penyelenggaraan kejuaraan regional dengan fasilitas setara pemain profesional.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="px-3 py-1.5 rounded-full border border-white/15">Rumput Standar FIFA</span>
+          <span class="px-3 py-1.5 rounded-full border border-white/15">Tribun 125 Kursi</span>
+          <span class="px-3 py-1.5 rounded-full border border-white/15">Loker &amp; Shower Air Panas</span>
+        </div>
+        <a href="https://www.instagram.com/goldstonearena/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex text-sm font-medium text-gold-300 hover:text-gold-400">Kunjungi @goldstonearena ↗</a>
+      </div>
+    </article>
+
+    <!-- Padel (offset) -->
+    <article class="reveal group shrink-0 w-[84vw] sm:w-[360px] lg:w-auto snap-center rounded-[32px] bg-gold-grad text-night p-3 pb-7 lg:mt-16 shadow-md lg:shadow-none">
+      <div class="relative rounded-[24px] overflow-hidden aspect-[4/5]">
+        <img src="assets/images/img_13.jpg" alt="Lapangan padel Goldstone Social Padel" loading="lazy" draggable="false" width="900" height="1125" class="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-700" />
+        <span class="absolute top-4 left-4 font-display font-bold text-5xl text-cream/90">02</span>
+        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-night/80 text-[11px] font-medium text-gold-300">Sewa Court Padel</span>
+      </div>
+      <div class="px-4 pt-6">
+        <p class="text-xs font-semibold uppercase tracking-wider text-night/70">Unit Racquet Club · Social Padel Timika</p>
+        <h3 class="font-display text-2xl font-semibold mt-1">Goldstone Social Padel</h3>
+        <p data-readmore="text-night" class="mt-2.5 text-night/80 text-sm leading-relaxed">
+          Membawa olahraga raket paling populer di dunia langsung ke Timika. Menyediakan penyewaan court padel per sesi, peralatan bermain, serta wadah <em>social play</em> yang seru, mudah dipelajari pemula, dan pas untuk memperluas relasi.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs font-medium">
+          <span class="px-3 py-1.5 rounded-full border border-night/25">Sewa Court Per Jam</span>
+          <span class="px-3 py-1.5 rounded-full border border-night/25">Cocok untuk Pemula</span>
+          <span class="px-3 py-1.5 rounded-full border border-night/25">Komunitas Padel Timika</span>
+        </div>
+        <a href="#jadwal" class="mt-6 inline-flex text-sm font-bold hover:underline">Cek Slot Padel Tersedia →</a>
+      </div>
+    </article>
+
+    <!-- Social House -->
+    <article class="reveal group shrink-0 w-[84vw] sm:w-[360px] lg:w-auto snap-center rounded-[32px] bg-sand p-3 pb-7 lg:mt-32 shadow-md lg:shadow-none">
+      <div class="relative rounded-[24px] overflow-hidden aspect-[4/5]">
+        <img src="assets/images/img_5.jpg" alt="Restoran Goldstone Social House" loading="lazy" draggable="false" width="900" height="1125" class="w-full h-full object-cover pointer-events-none group-hover:scale-105 transition-transform duration-700" />
+        <span class="absolute top-4 left-4 font-display font-bold text-5xl text-cream/90">03</span>
+        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-cream/90 text-[11px] font-semibold text-night">Coffee Shop &amp; Resto</span>
+      </div>
+      <div class="px-4 pt-6">
+        <p class="text-xs font-semibold uppercase tracking-wider text-gold-700">Unit F&amp;B &amp; Lifestyle · @goldstonesocialhouse</p>
+        <h3 class="font-display text-2xl font-semibold mt-1">Goldstone Social House</h3>
+        <p data-readmore="text-gold-700" class="mt-2.5 text-night/70 text-sm leading-relaxed">
+          Bisnis kuliner &amp; ruang berkumpul di kompleks Goldstone dengan konsep <em>"Relax, Dine, and Enjoy Together"</em>. Menyajikan <strong>specialty coffee, minuman segar, dan hidangan restoran lengkap</strong>—nyaman untuk makan keluarga, nongkrong, atau bekerja tanpa harus ikut bertanding.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-2 text-xs">
+          <span class="px-3 py-1.5 rounded-full border border-night/15">Specialty Coffee &amp; Bar</span>
+          <span class="px-3 py-1.5 rounded-full border border-night/15">Family Dining</span>
+          <span class="px-3 py-1.5 rounded-full border border-night/15">Nobar &amp; Gathering</span>
+        </div>
+        <a href="https://www.instagram.com/goldstonesocialhouse/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex text-sm font-semibold text-gold-700 hover:text-night">Kunjungi @goldstonesocialhouse ↗</a>
+      </div>
+    </article>
+  </div>
+  <!-- Mobile/Tablet swipe controls & indicator -->
+  <div class="lg:hidden max-w-7xl mx-auto px-6 sm:px-8 mt-3 flex items-center justify-between text-xs text-night/60">
+    <span id="eko-dots" class="flex items-center gap-1.5" aria-hidden="true">
+      <i class="w-5 h-1.5 rounded-full bg-night transition-all"></i>
+      <i class="w-1.5 h-1.5 rounded-full bg-night/25 transition-all"></i>
+      <i class="w-1.5 h-1.5 rounded-full bg-night/25 transition-all"></i>
+    </span>
+    <div class="flex items-center gap-2">
+      <span>Geser kartu</span>
+      <button type="button" id="eko-prev" aria-label="Kartu sebelumnya" class="w-9 h-9 rounded-full bg-sand hover:bg-night hover:text-cream border border-night/10 flex items-center justify-center transition-colors">←</button>
+      <button type="button" id="eko-next" aria-label="Kartu berikutnya" class="w-9 h-9 rounded-full bg-sand hover:bg-night hover:text-cream border border-night/10 flex items-center justify-center transition-colors">→</button>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= PITCH SPEC & FASILITAS LENGKAP ================= -->
+<section id="fasilitas" class="px-4 sm:px-6">
+  <div class="reveal relative max-w-7xl mx-auto rounded-[40px] bg-moss text-cream overflow-hidden grain">
+    <div aria-hidden="true" class="absolute -right-32 -bottom-32 w-[480px] h-[480px] rounded-full bg-gold-500/20 blur-[120px]"></div>
+    <div class="relative grid lg:grid-cols-12 gap-10 p-7 sm:p-12 lg:p-16 items-center">
+
+      <div class="lg:col-span-6">
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <p class="eyebrow text-gold-300">Standar Lapangan &amp; Fasilitas · @goldstonearena</p>
+          <span class="px-3 py-1 rounded-full bg-white/10 text-xs font-medium text-gold-300">Rumput Premium Standar FIFA</span>
+        </div>
+        <!-- Pitch line diagram -->
+        <svg viewBox="0 0 700 480" class="w-full h-auto" role="img" aria-label="Diagram lapangan mini soccer 64 kali 44 meter">
+          <g fill="none" stroke="#E2C064" stroke-width="2.5" stroke-linecap="round">
+            <rect x="40" y="40" width="620" height="400" rx="14" />
+            <line x1="350" y1="40" x2="350" y2="440" />
+            <circle cx="350" cy="240" r="58" />
+            <circle cx="350" cy="240" r="4" fill="#E2C064" />
+            <rect x="40" y="150" width="90" height="180" />
+            <rect x="570" y="150" width="90" height="180" />
+            <rect x="22" y="205" width="18" height="70" />
+            <rect x="660" y="205" width="18" height="70" />
+            <circle cx="105" cy="240" r="3.5" fill="#E2C064" />
+            <circle cx="595" cy="240" r="3.5" fill="#E2C064" />
+          </g>
+          <g fill="#F5F1E6" font-family="Bricolage Grotesque" font-weight="600">
+            <text x="350" y="26" text-anchor="middle" font-size="20">64 m</text>
+            <text x="684" y="140" font-size="20" transform="rotate(90 684 140)">44 m</text>
+          </g>
+        </svg>
+        <p class="mt-3 text-xs sm:text-sm text-cream/65 italic text-center">
+          "Tingkatkan kualitas permainan Anda bersama fasilitas terbaik."
+        </p>
+      </div>
+
+      <div class="lg:col-span-6">
+        <p class="eyebrow text-gold-300/80 mb-3">10 Fasilitas Pendukung</p>
+        <h2 class="h2 font-display font-semibold">Nyaman bagi pemain,<br /><span class="font-serif italic font-normal text-gold-grad">ramah bagi keluarga.</span></h2>
+        <p class="mt-3 text-cream/70 leading-relaxed text-sm sm:text-base max-w-xl">
+          Dirancang lengkap untuk menunjang kebutuhan tim di lapangan sekaligus kenyamanan penonton dan keluarga yang mendampingi.
+        </p>
+
+        <!-- Minimalist Editorial Facility Index (No emojis, no boxy AI cards) -->
+        <dl id="fac-list" class="fac-list mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 border-t border-white/15 text-sm">
+          <div class="py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">01</span>
+              <span>Shower Room</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Air panas &amp; dingin</dd>
+          </div>
+
+          <div class="py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">02</span>
+              <span>Locker Room</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Loker penyimpanan tim</dd>
+          </div>
+
+          <div class="py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">03</span>
+              <span>Ruang Ganti</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Bersih &amp; privat</dd>
+          </div>
+
+          <div class="py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">04</span>
+              <span>Tribun Single Seat</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">125 kursi penonton</dd>
+          </div>
+
+          <div class="py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">05</span>
+              <span>Toilet Bersih</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Pemain &amp; pengunjung</dd>
+          </div>
+
+          <div class="fac-more py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">06</span>
+              <span>Mushola</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Ruang ibadah tenang</dd>
+          </div>
+
+          <div class="fac-more py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">07</span>
+              <span>Mini Playground</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Area bermain anak</dd>
+          </div>
+
+          <div class="fac-more py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">08</span>
+              <span>Store</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Perlengkapan pemain</dd>
+          </div>
+
+          <div class="fac-more py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">09</span>
+              <span>Parkir Luas</span>
+            </dt>
+            <dd class="text-xs text-cream/55 text-right">Area mobil &amp; motor</dd>
+          </div>
+
+          <div class="fac-more py-3.5 border-b border-white/15 flex items-baseline justify-between gap-4">
+            <dt class="font-display font-medium text-cream flex items-baseline gap-2.5">
+              <span class="text-[11px] font-mono text-gold-300/70">10</span>
+              <span>Cafetaria</span>
+            </dt>
+            <dd class="text-xs text-gold-300 text-right">Segera hadir</dd>
+          </div>
+        </dl>
+        <button type="button" id="fac-toggle" aria-expanded="false" class="fac-toggle mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-gold-300 underline underline-offset-4">
+          Lihat 5 fasilitas lainnya ↓
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= PRICELIST & JADWAL ================= -->
+<section id="jadwal" class="max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
+  <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-10 reveal">
+    <div>
+      <p class="eyebrow text-gold-600 mb-4">Pricelist Resmi &amp; Cek Ketersediaan</p>
+      <h2 class="h2 font-display font-semibold">Daftar harga &amp; <span class="font-serif italic font-normal text-gold-600">jadwal main.</span></h2>
+      <p class="mt-3 text-night/65 text-sm sm:text-base max-w-2xl">
+        Pilih kategori tarif dan jam bermain (06.00–24.00 WIT). Estimasi biaya dihitung otomatis sebelum diteruskan ke WhatsApp admin.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <!-- Sport toggle -->
+      <div role="group" aria-label="Pilih olahraga" class="inline-flex bg-sand rounded-full p-1 text-sm font-medium">
+        <button type="button" data-sport="soccer" class="sport-btn px-5 py-2.5 rounded-full transition-colors">Mini Soccer</button>
+        <button type="button" data-sport="padel" class="sport-btn px-5 py-2.5 rounded-full transition-colors">Social Padel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MINIMALIST TAB-SWITCHED PRICELIST -->
+  <div id="pricelist-wrapper" class="reveal mb-8 rounded-[28px] bg-white border border-night/10 p-6 sm:p-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-night/10">
+      <div>
+        <h3 class="font-display text-lg font-semibold text-night">Pricelist Sewa Lapangan <span class="text-night/45 font-normal text-sm">(64 × 44 m)</span></h3>
+      </div>
+      <!-- 3 Clean Tabs: Reguler | Member | Dana Pelajar -->
+      <div role="tablist" aria-label="Kategori tarif sewa" class="inline-flex bg-sand rounded-full p-1 text-xs sm:text-sm font-medium w-fit">
+        <button type="button" role="tab" data-tier="reguler" class="tier-tab-btn px-4 py-2 rounded-full transition-colors">Reguler</button>
+        <button type="button" role="tab" data-tier="member" class="tier-tab-btn px-4 py-2 rounded-full transition-colors">Member</button>
+        <button type="button" role="tab" data-tier="pelajar" class="tier-tab-btn px-4 py-2 rounded-full transition-colors">Dana Pelajar</button>
+      </div>
+    </div>
+
+    <!-- PANEL 1: REGULER (Default) -->
+    <div id="tier-panel-reguler" class="tier-panel pt-6">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <div class="flex items-baseline justify-between mb-3">
+            <span class="font-display font-semibold text-sm text-night">Weekday (Senin – Jumat)</span>
+            <span class="text-xs text-night/45">Harga Reguler</span>
+          </div>
+          <dl class="divide-y divide-night/10 border-t border-b border-night/10 text-sm tabular-nums">
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">06.00 – 10.00</dt>
+              <dd class="font-semibold text-night">Rp600.000 / jam</dd>
+            </div>
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">10.00 – 15.00</dt>
+              <dd class="font-semibold text-night">Rp550.000 / jam</dd>
+            </div>
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">15.00 – 22.00</dt>
+              <dd class="font-semibold text-night">Rp850.000 / jam</dd>
+            </div>
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">22.00 – 24.00</dt>
+              <dd class="font-semibold text-night">Rp800.000 / jam</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div>
+          <div class="flex items-baseline justify-between mb-3">
+            <span class="font-display font-semibold text-sm text-night">Weekend &amp; Tanggal Merah (Sabtu – Minggu)</span>
+            <span class="text-xs text-night/45">Harga Reguler</span>
+          </div>
+          <dl class="divide-y divide-night/10 border-t border-b border-night/10 text-sm tabular-nums">
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">06.00 – 10.00</dt>
+              <dd class="font-semibold text-night">Rp800.000 / jam</dd>
+            </div>
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">10.00 – 15.00</dt>
+              <dd class="font-semibold text-night">Rp600.000 / jam</dd>
+            </div>
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">15.00 – 22.00</dt>
+              <dd class="font-semibold text-night">Rp1.000.000 / jam</dd>
+            </div>
+            <div class="flex justify-between py-3">
+              <dt class="text-night/65">22.00 – 24.00</dt>
+              <dd class="font-semibold text-night">Rp950.000 / jam</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: MEMBER -->
+    <div id="tier-panel-member" hidden class="tier-panel pt-6">
+      <div class="flex items-baseline justify-between mb-3">
+        <span class="font-display font-semibold text-sm text-night">Weekday (Senin – Jumat) · Tarif Khusus Member</span>
+        <span class="text-xs font-medium text-gold-700">Hemat Rp50.000 / jam</span>
+      </div>
+      <dl class="grid sm:grid-cols-2 gap-x-8 divide-y sm:divide-y-0 border-t border-b border-night/10 text-sm tabular-nums">
+        <div class="divide-y divide-night/10">
+          <div class="flex justify-between py-3">
+            <dt class="text-night/65">06.00 – 10.00</dt>
+            <dd class="font-semibold text-night">Rp550.000 / jam</dd>
+          </div>
+          <div class="flex justify-between py-3">
+            <dt class="text-night/65">10.00 – 15.00</dt>
+            <dd class="font-semibold text-night">Rp500.000 / jam</dd>
+          </div>
+        </div>
+        <div class="divide-y divide-night/10 border-t sm:border-t-0 border-night/10">
+          <div class="flex justify-between py-3">
+            <dt class="text-night/65">15.00 – 22.00</dt>
+            <dd class="font-semibold text-night">Rp800.000 / jam</dd>
+          </div>
+          <div class="flex justify-between py-3">
+            <dt class="text-night/65">22.00 – 24.00</dt>
+            <dd class="font-semibold text-night">Rp750.000 / jam</dd>
+          </div>
+        </div>
+      </dl>
+    </div>
+
+    <!-- PANEL 3: DANA PELAJAR -->
+    <div id="tier-panel-pelajar" hidden class="tier-panel pt-6">
+      <div class="flex items-baseline justify-between mb-3">
+        <span class="font-display font-semibold text-sm text-night">Tarif Khusus Dana Pelajar</span>
+        <span class="text-xs font-medium text-gold-700">Senin – Kamis</span>
+      </div>
+      <dl class="divide-y divide-night/10 border-t border-b border-night/10 text-sm tabular-nums">
+        <div class="flex justify-between py-3.5">
+          <dt class="text-night/65">Senin – Kamis · 06.00 – 15.00 WIT</dt>
+          <dd class="font-semibold text-night">Rp500.000 / jam</dd>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Catatan singkat ketentuan sewa (minimalis) -->
+    <p class="mt-4 pt-3 border-t border-night/5 text-xs text-night/50 flex flex-wrap items-center gap-x-4 gap-y-1">
+      <span>• Wajib sepatu turf / futsal (dilarang pul besi)</span>
+      <span>• Kunci jadwal dengan DP konfirmasi via WhatsApp</span>
+      <span>• Dana Pelajar wajib menunjukkan kartu pelajar/mahasiswa aktif</span>
+    </p>
+  </div>
+
+  <div class="reveal grid lg:grid-cols-12 gap-5">
+    <!-- Calendar card -->
+    <div class="lg:col-span-7 min-w-0 rounded-[28px] sm:rounded-[32px] bg-white p-5 sm:p-8 shadow-[0_30px_60px_-30px_rgba(11,12,9,.25)] flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-5 sm:mb-6">
+          <p id="cal-label" class="font-display text-lg sm:text-xl font-semibold"></p>
+          <div class="flex gap-2">
+            <button type="button" id="cal-prev" aria-label="Sebelumnya" class="w-10 h-10 rounded-full bg-sand hover:bg-night hover:text-cream disabled:opacity-30 disabled:hover:bg-sand disabled:hover:text-night transition-colors">←</button>
+            <button type="button" id="cal-next" aria-label="Berikutnya" class="w-10 h-10 rounded-full bg-sand hover:bg-night hover:text-cream transition-colors">→</button>
+          </div>
+        </div>
+
+        <div id="month-view">
+          <div class="grid grid-cols-7 gap-1.5 sm:gap-2 text-center text-[11px] sm:text-xs font-medium text-night/40 pb-2">
+            <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+          </div>
+          <div id="month-grid" class="grid grid-cols-7 gap-1.5 sm:gap-2"></div>
+        </div>
+      </div>
+
+      <p class="mt-5 pt-4 border-t border-night/10 text-xs text-night/45">
+        Pilih tanggal di kalender untuk melihat ketersediaan jam bermain.
+      </p>
+    </div>
+
+    <!-- Slots + summary -->
+    <div class="lg:col-span-5 min-w-0 rounded-[28px] sm:rounded-[32px] bg-night text-cream p-5 sm:p-8 flex flex-col">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <p class="text-[11px] uppercase tracking-widest font-semibold text-cream/45">Pilih Jam (06.00 – 24.00)</p>
+        <span id="day-rate-badge" class="text-[11px] px-2.5 py-0.5 rounded-full bg-white/10 text-gold-300 font-medium">Weekday · Harga Reguler</span>
+      </div>
+      <p id="slot-date" class="mt-1.5 font-display text-xl sm:text-2xl font-semibold"></p>
+
+      <!-- Category tier toggle inside slot card (Full-width 3-col grid so never cramped on mobile) -->
+      <div role="group" aria-label="Pilih kategori tarif sewa" class="mt-3.5 grid grid-cols-3 gap-1 p-1 bg-white/[0.06] rounded-2xl border border-white/10 text-center">
+        <button type="button" data-tier="reguler" class="slot-tier-btn py-2 px-2 rounded-xl text-xs font-medium transition-colors">Reguler</button>
+        <button type="button" data-tier="member" class="slot-tier-btn py-2 px-2 rounded-xl text-xs font-medium transition-colors">Member</button>
+        <button type="button" data-tier="pelajar" class="slot-tier-btn py-2 px-2 rounded-xl text-xs font-medium transition-colors">Pelajar</button>
+      </div>
+
+      <div id="slot-grid" class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-2"></div>
+
+      <div class="mt-auto pt-6" aria-live="polite">
+        <div class="rounded-2xl sm:rounded-3xl bg-white/[0.06] border border-white/10 p-4 sm:p-5">
+          <p id="summary-text" class="text-xs sm:text-sm text-cream/60">Pilih satu atau beberapa jam untuk melihat estimasi harga sewa.</p>
+        </div>
+        <button type="button" id="book-btn" disabled
+                class="mt-3.5 w-full bg-gold-grad text-night py-3.5 sm:py-4 px-4 rounded-full text-sm sm:text-base font-semibold hover:brightness-110 transition disabled:bg-none disabled:bg-white/10 disabled:text-cream/30 disabled:cursor-not-allowed">
+          Booking via WhatsApp (0812-8080-9212) ↗
+        </button>
+        <p id="copy-note" class="mt-2.5 text-[11px] sm:text-xs text-cream/40 text-center">Terhubung langsung ke WhatsApp Admin Goldstone Arena</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= EVENTS (3D Circular Carousel) ================= -->
+<section class="pb-20 lg:pb-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-end justify-between gap-6 mb-4 sm:mb-6 reveal">
+    <div>
+      <p class="eyebrow text-gold-600 mb-3">Portofolio Event &amp; Kolaborasi</p>
+      <h2 class="h2 font-display font-semibold">Lebih dari<br /><span class="font-serif italic font-normal text-gold-600">sekadar sewa harian.</span></h2>
+    </div>
+    
+    <!-- Controls (Mobile + Desktop) -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs sm:text-sm text-night/60 hidden sm:inline">Putar / Geser 3D</span>
+      <div class="flex gap-2">
+        <button type="button" id="events-prev" aria-label="Putar ke kiri" class="w-10 h-10 rounded-full bg-sand hover:bg-night hover:text-cream border border-night/10 flex items-center justify-center transition-colors">
+          ←
+        </button>
+        <button type="button" id="events-next" aria-label="Putar ke kanan" class="w-10 h-10 rounded-full bg-sand hover:bg-night hover:text-cream border border-night/10 flex items-center justify-center transition-colors">
+          →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative w-full h-[440px] sm:h-[540px]">
+    <div id="events-circular-carousel" class="circular-carousel" role="region" aria-roledescription="carousel" aria-label="Portofolio Event dan Kolaborasi Goldstone" tabindex="0">
+      <div class="circular-carousel__view">
+        <div class="circular-carousel__stage">
+          <div class="circular-carousel__camera">
+            <div class="circular-carousel__ring"></div>
+          </div>
+        </div>
+      </div>
+      <div class="circular-carousel__live" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= SOCIAL HOUSE ================= -->
+<section id="social-house" class="px-4 sm:px-6">
+  <div class="max-w-7xl mx-auto rounded-[40px] bg-sand overflow-hidden">
+    <div class="grid lg:grid-cols-2 gap-10 p-7 sm:p-12 lg:p-16 items-center">
+      <div class="reveal">
+        <p class="eyebrow text-gold-700 mb-4">Mengenal Goldstone Social House · @goldstonesocialhouse</p>
+        <h2 class="h2 font-display font-semibold blur-text-view">Bukan sekadar kafe lapangan— <span class="font-serif italic font-normal">restoran &amp; ruang kumpul pilihan.</span></h2>
+        <p data-readmore="text-gold-700" class="mt-6 text-night/75 leading-relaxed max-w-lg text-sm sm:text-base">
+          Anda tidak perlu ikut bermain bola atau padel untuk menikmati <strong>Goldstone Social House</strong>. Mengusung konsep <em>"Coffee Shop &amp; Restaurant Where Family and Friends Can Relax, Dine, and Enjoy the Experience Together"</em>, kami hadir sebagai destinasi kuliner dan tempat nongkrong modern di Timika. Mulai dari <strong>kopi pagi &amp; meeting santai</strong>, <strong>makan siang/malam bersama keluarga</strong>, hingga <strong>mengisi energi bersama satu tim seusai pertandingan</strong>—semuanya diracik di ruang yang hangat dan nyaman.
+        </p>
+        <ul class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-y-2.5 gap-x-4 pt-5 border-t border-night/10 text-xs sm:text-sm text-night/80 font-medium">
+          <li class="flex items-center gap-2.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-600 shrink-0"></span>
+            <span>Specialty Coffee &amp; Mocktail</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-600 shrink-0"></span>
+            <span>Restoran &amp; Sharing Platter</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-600 shrink-0"></span>
+            <span>Nobar Pertandingan</span>
+          </li>
+          <li class="flex items-center gap-2.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold-600 shrink-0"></span>
+            <span>Reservasi Keluarga &amp; Komunitas</span>
+          </li>
+        </ul>
+        <a href="https://www.instagram.com/goldstonesocialhouse/" target="_blank" rel="noopener noreferrer" class="mt-8 sm:mt-9 inline-flex items-center justify-between sm:justify-start gap-3 bg-night text-cream pl-5 sm:pl-6 pr-2 py-2 rounded-full text-xs sm:text-base font-medium hover:bg-moss transition-colors w-full sm:w-auto">
+          <span>Lihat Menu &amp; Reservasi di @goldstonesocialhouse</span>
+          <span class="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full bg-gold-grad text-night grid place-items-center">↗</span>
+        </a>
+      </div>
+
+      <!-- Collage -->
+      <div class="relative h-[320px] sm:h-[480px] reveal">
+        <img src="assets/images/img_10.jpg" alt="Interior Social House" loading="lazy" width="900" height="1100"
+             class="absolute left-0 top-0 w-[62%] h-[85%] object-cover rounded-[28px]" />
+        <img src="assets/images/img_9.jpg" alt="Hidangan Social House" loading="lazy" width="700" height="800"
+             class="absolute right-0 bottom-0 w-[48%] h-[62%] object-cover rounded-[28px] border-[6px] border-sand" />
+        <div class="absolute right-[4%] top-[8%] rotate-6 bg-night text-gold-300 rounded-2xl px-5 py-4 shadow-xl">
+          <p class="font-serif italic text-2xl leading-none">Relax &amp; Dine</p>
+          <p class="text-xs text-cream/70 mt-1">Buka setiap hari</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= FINAL CTA & LOCATION ================= -->
+<section id="lokasi" class="px-4 sm:px-6 py-20 lg:py-28">
+  <div class="reveal relative max-w-7xl mx-auto rounded-[40px] bg-night text-cream overflow-hidden grain">
+    <img src="assets/images/img_2.jpg" alt="" loading="lazy" width="1800" height="1000"
+         class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <div aria-hidden="true" class="absolute -top-24 left-1/3 w-[600px] h-[400px] rounded-full bg-gold-500/25 blur-[120px]"></div>
+
+    <div class="relative p-5 sm:p-10 lg:p-16 space-y-8 sm:space-y-12">
+      <!-- Top banner content -->
+      <div class="grid lg:grid-cols-12 gap-8 items-end">
+        <div class="lg:col-span-8">
+          <p class="eyebrow text-gold-300 mb-3 sm:mb-4">Kunjungi Langsung atau Booking Sekarang</p>
+          <h2 class="hero-type font-display font-semibold">Tanding di Arena,<br />santai di <span class="font-serif italic font-normal text-gold-grad">Social House.</span></h2>
+          <p class="mt-4 sm:mt-6 text-cream/75 text-sm sm:text-lg max-w-2xl leading-relaxed">
+            Tingkatkan kualitas permainan Anda bersama fasilitas terbaik di <strong class="text-cream font-medium">Jl. Hasanuddin Baru (Irigasi Ujung), Timika, Papua Tengah</strong> · WhatsApp <a href="https://wa.me/6281280809212" target="_blank" rel="noopener noreferrer" class="text-gold-300 underline decoration-gold-300/40 hover:decoration-gold-300">0812-8080-9212</a>.
+          </p>
+        </div>
+        <div class="lg:col-span-4 flex flex-col gap-3 w-full">
+          <a href="https://wa.me/6281280809212?text=Halo%20Goldstone%20Arena%2C%20saya%20ingin%20tanya%20jadwal%20%26%20pricelist%20sewa%20lapangan." target="_blank" rel="noopener noreferrer"
+             class="flex items-center justify-between gap-2 bg-gold-grad text-night pl-5 pr-1.5 py-1.5 sm:pl-7 sm:pr-2 sm:py-2 rounded-full text-xs sm:text-sm font-semibold hover:brightness-110 transition">
+            <span class="truncate">Chat WhatsApp (0812-8080-9212)</span>
+            <span class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-night text-gold-300 grid place-items-center shrink-0">↗</span>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Goldstone+Arena+Jl+Hasanuddin+Baru+Irigasi+Ujung+Timika" target="_blank" rel="noopener noreferrer"
+             class="flex items-center justify-between gap-2 border border-white/20 pl-5 pr-1.5 py-1.5 sm:pl-7 sm:pr-2 sm:py-2 rounded-full text-xs sm:text-sm hover:bg-white/10 transition-colors">
+            <span class="truncate">Petunjuk arah Google Maps</span>
+            <span class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/10 grid place-items-center shrink-0">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive Embedded Map Frame -->
+      <div class="rounded-[24px] sm:rounded-[28px] overflow-hidden border border-white/15 bg-coal shadow-2xl relative">
+        <div class="p-3.5 sm:p-5 flex flex-wrap items-center justify-between gap-2.5 bg-white/[0.04] border-b border-white/10 text-xs text-cream/80">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <img src="assets/images/goldstone-emblem.png" alt="Logo Goldstone" class="w-5 h-5 object-contain shrink-0" />
+            <span class="font-semibold text-cream truncate">Goldstone Arena &amp; Social House</span>
+            <span class="text-cream/40 hidden md:inline">• Jl. Hasanuddin Baru (Irigasi Ujung)</span>
+          </div>
+          <span class="text-[11px] px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/10 text-gold-300 shrink-0">Timika, Papua Tengah</span>
+        </div>
+
+        <div class="relative w-full h-[260px] sm:h-[360px] lg:h-[420px]">
+          <iframe
+            title="Peta Lokasi Goldstone Arena dan Social House Timika"
+            src="https://maps.google.com/maps?q=Goldstone+Arena+Timika+Papua+Tengah&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            class="w-full h-full border-0 filter grayscale contrast-125 invert-[0.92] hue-rotate-180"
+            loading="lazy"
+            allowfullscreen=""
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="absolute bottom-3 left-3 right-3 sm:right-auto sm:bottom-4 sm:left-4 bg-night/95 backdrop-blur-md border border-white/20 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-2xl">
+            <img src="assets/images/goldstone-emblem.png" alt="Logo Goldstone" class="w-10 h-10 object-contain shrink-0" />
+            <div class="text-xs min-w-0">
+              <p class="font-bold text-cream text-sm">Goldstone Arena Timika</p>
+              <p class="text-cream/70 truncate sm:overflow-visible text-xs mt-0.5">Jl. Hasanuddin Baru (Irigasi Ujung), Timika</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ================= FLOATING WHATSAPP BOOKING WIDGET ================= -->
+<aside aria-label="Widget WhatsApp Booking" class="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-50">
+  <a href="https://wa.me/6281280809212?text=Halo%20Goldstone%20Arena%2C%20saya%20ingin%20tanya%20jadwal%20%26%20booking%20lapangan."
+     target="_blank" rel="noopener noreferrer"
+     class="group flex items-center gap-2.5 bg-night/95 hover:bg-night text-cream pl-3 pr-4 py-2.5 rounded-full font-display font-semibold text-xs sm:text-sm tracking-wide shadow-[0_12px_32px_rgba(0,0,0,0.5)] border border-white/20 hover:border-gold-400 backdrop-blur-md transition-all duration-300 hover:scale-105 active:scale-95">
+    <span class="w-7 h-7 rounded-full bg-emerald-500 text-white grid place-items-center shrink-0 shadow-sm group-hover:scale-110 transition-transform">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.711 1.457h.004c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.476-8.413z"/>
+      </svg>
+    </span>
+    <span class="font-bold text-cream">Booking</span>
+    <span class="text-xs text-gold-300 group-hover:translate-x-0.5 transition-transform font-bold">↗</span>
+  </a>
+</aside>
+
+
+  <!-- Main Application Logic -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

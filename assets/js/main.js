@@ -1205,6 +1205,77 @@ function initApp() {
     }
   })();
 
+  // ---------- Vercel Client Visit & Interaction Logger ----------
+  (function initClientTracker() {
+    const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    if (isLocal) return;
+
+    // Load Vercel Web Analytics script on production
+    const vaScript = document.createElement('script');
+    vaScript.defer = true;
+    vaScript.src = '/_vercel/insights/script.js';
+    document.head.appendChild(vaScript);
+
+    const params = new URLSearchParams(location.search);
+    const clientTag = params.get('client') || params.get('ref') || 'visitor';
+
+    function sendLog(event, detail) {
+      const payload = JSON.stringify({
+        event,
+        detail,
+        tag: clientTag,
+        screen: `${window.innerWidth}x${window.innerHeight}`,
+        referrer: document.referrer || 'direct',
+      });
+
+      try {
+        if (navigator.sendBeacon) {
+          const blob = new Blob([payload], { type: 'application/json' });
+          navigator.sendBeacon('/api/track', blob);
+        } else {
+          fetch('/api/track', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: payload,
+            keepalive: true,
+          }).catch(() => {});
+        }
+      } catch {}
+    }
+
+    // 1. Log initial page open
+    sendLog('PAGE_OPEN', location.pathname + location.search);
+
+    // 2. Log key interactions (Pricelist tabs, Sport toggle, WhatsApp / Registration links)
+    document.addEventListener('click', (e) => {
+      const tierBtn = e.target.closest('.tier-tab-btn');
+      if (tierBtn) {
+        sendLog('CHECK_PRICELIST', `Tab: ${tierBtn.dataset.tier}`);
+        return;
+      }
+
+      const sportBtn = e.target.closest('.sport-btn');
+      if (sportBtn) {
+        sendLog('SWITCH_SPORT', `Sport: ${sportBtn.dataset.sport}`);
+        return;
+      }
+
+      const bookBtn = e.target.closest('#book-btn');
+      if (bookBtn) {
+        sendLog('CLICK_BOOKING_SCHEDULE', bookBtn.textContent.trim().slice(0, 50));
+        return;
+      }
+
+      const link = e.target.closest('a[href]');
+      if (link) {
+        const href = link.getAttribute('href') || '';
+        if (href.includes('wa.me') || href.includes('persekutuangerejamimika.org')) {
+          sendLog('CLICK_CTA_LINK', href.slice(0, 80));
+        }
+      }
+    }, { passive: true });
+  })();
+
 }
 
 // ==========================================

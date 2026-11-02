@@ -33,11 +33,3 @@ if (!fs.existsSync(distDir)) {
 fs.writeFileSync(distIndex, html, 'utf-8');
 console.log(`\n🎉 Build complete: ${distIndex}`);
 
-// Copy proposal.html into dist/ if present
-const srcProposal = path.join(__dirname, 'proposal.html');
-if (fs.existsSync(srcProposal)) {
-  const distProposal = path.join(distDir, 'proposal.html');
-  fs.copyFileSync(srcProposal, distProposal);
-  console.log(`✓ Copied proposal.html -> ${distProposal}`);
-}
-

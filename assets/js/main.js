@@ -14,7 +14,7 @@ async function loadSections() {
     Array.from(containers).map(async (el) => {
       const file = el.getAttribute('data-include');
       try {
-        const res = await fetch(file);
+        const res = await fetch(`${file}?v=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const html = await res.text();
         el.outerHTML = html;
@@ -29,6 +29,208 @@ async function loadSections() {
 // 2. COMPONENT INITIALIZERS
 // ==========================================
 function initApp() {
+  // ---------- Top Promo Announcement Bar & Welcome Event Modal ----------
+  (function initPromoBar() {
+    const bar = document.getElementById('promo-bar');
+    const promoModal = document.getElementById('promo-modal');
+
+    // Setup native <dialog> modal & light-dismiss fallback
+    if (promoModal && typeof promoModal.showModal === 'function') {
+      const viewEditorial = document.getElementById('promo-view-editorial');
+      const viewPoster = document.getElementById('promo-view-poster');
+      const posterToggle = document.getElementById('promo-poster-toggle');
+      const posterThumb = document.getElementById('promo-poster-thumb');
+
+      function setPosterMode(showPoster) {
+        if (!viewEditorial || !viewPoster || !posterToggle) return;
+        viewEditorial.classList.toggle('hidden', showPoster);
+        viewPoster.classList.toggle('hidden', !showPoster);
+        posterToggle.textContent = showPoster ? '← Info Singkat' : 'Lihat Poster';
+      }
+
+      if (posterToggle) {
+        posterToggle.addEventListener('click', () => {
+          const isPosterVisible = viewPoster && !viewPoster.classList.contains('hidden');
+          setPosterMode(!isPosterVisible);
+        });
+      }
+      if (posterThumb) {
+        posterThumb.addEventListener('click', () => setPosterMode(true));
+      }
+
+      promoModal.addEventListener('close', () => {
+        promoModal.returnValue = '';
+        setPosterMode(false);
+      });
+
+      // Fallback for browsers without native closedby="any" support
+      if (!('closedBy' in HTMLDialogElement.prototype)) {
+        const outside = (e, dialog) => {
+          const r = dialog.getBoundingClientRect();
+          return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+        };
+        let pressedOutside = false;
+        promoModal.addEventListener('pointerdown', (e) => {
+          pressedOutside = outside(e, promoModal);
+        });
+        promoModal.addEventListener('pointerup', (e) => {
+          if (pressedOutside && outside(e, promoModal)) promoModal.close();
+        });
+      }
+
+      // Automatically open modal on initial page load unless disabled
+      if (promoModal.dataset.autoOpen !== 'false') {
+        setTimeout(() => {
+          if (!promoModal.open) promoModal.showModal();
+        }, 250);
+      }
+    }
+
+    if (!bar) return;
+
+    const slides = Array.from(bar.querySelectorAll('.promo-slide'));
+    const badgeText = document.getElementById('promo-badge-text');
+    const ctaBtn = document.getElementById('promo-cta');
+    const ctaText = document.getElementById('promo-cta-text');
+    const dotsWrap = document.getElementById('promo-dots');
+    const closeBtn = document.getElementById('promo-close');
+
+    if (!slides.length) return;
+
+    let currentIdx = 0;
+    let timer = null;
+
+    // Allow clicking any slide with data-open-modal="true" to open the modal directly
+    slides.forEach((slide) => {
+      if (slide.dataset.openModal === 'true' && promoModal) {
+        slide.addEventListener('click', () => {
+          if (!promoModal.open) promoModal.showModal();
+        });
+      }
+    });
+
+    // Build indicator dots if multiple promos exist
+    if (dotsWrap && slides.length > 1) {
+      dotsWrap.innerHTML = '';
+      slides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Promo ${idx + 1}`);
+        dot.className = idx === 0
+          ? 'w-4 h-1.5 rounded-full bg-night transition-all'
+          : 'w-1.5 h-1.5 rounded-full bg-night/30 hover:bg-night/60 transition-all';
+        dot.addEventListener('click', () => {
+          showSlide(idx);
+          restartTimer();
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function showSlide(index) {
+      currentIdx = (index + slides.length) % slides.length;
+      const activeSlide = slides[currentIdx];
+
+      slides.forEach((s, i) => {
+        if (i === currentIdx) {
+          s.classList.remove('hidden');
+          s.classList.add('is-active');
+        } else {
+          s.classList.remove('is-active');
+          s.classList.add('hidden');
+        }
+      });
+
+      if (badgeText && activeSlide.dataset.badge) {
+        badgeText.textContent = activeSlide.dataset.badge;
+      }
+      if (ctaText && activeSlide.dataset.cta) {
+        ctaText.textContent = activeSlide.dataset.cta;
+      }
+      if (ctaBtn) {
+        ctaBtn.setAttribute('href', activeSlide.dataset.target || '#promo-modal');
+      }
+
+      if (dotsWrap && slides.length > 1) {
+        Array.from(dotsWrap.children).forEach((d, i) => {
+          d.className = i === currentIdx
+            ? 'w-4 h-1.5 rounded-full bg-night transition-all'
+            : 'w-1.5 h-1.5 rounded-full bg-night/30 hover:bg-night/60 transition-all';
+        });
+      }
+    }
+
+    function startTimer() {
+      if (slides.length <= 1) return;
+      stopTimer();
+      timer = setInterval(() => showSlide(currentIdx + 1), 5200);
+    }
+
+    function stopTimer() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function restartTimer() {
+      stopTimer();
+      startTimer();
+    }
+
+    bar.addEventListener('mouseenter', stopTimer);
+    bar.addEventListener('mouseleave', startTimer);
+
+    if (ctaBtn) {
+      ctaBtn.addEventListener('click', (e) => {
+        const activeSlide = slides[currentIdx];
+        if (!activeSlide) return;
+
+        // If the active slide opens the promo modal
+        if (activeSlide.dataset.openModal === 'true' && promoModal) {
+          e.preventDefault();
+          if (!promoModal.open) promoModal.showModal();
+          return;
+        }
+
+        const targetSel = activeSlide.dataset.target || '#jadwal';
+        const tier = activeSlide.dataset.tier;
+        const sport = activeSlide.dataset.sport;
+
+        // Auto-select sport & pricelist tier tab in Jadwal section
+        if (sport) {
+          const sportBtn = document.querySelector(`.sport-btn[data-sport="${sport}"]`);
+          if (sportBtn) sportBtn.click();
+        }
+        if (tier) {
+          const tierBtn = document.querySelector(`.tier-tab-btn[data-tier="${tier}"]`);
+          if (tierBtn) tierBtn.click();
+        }
+
+        const targetEl = document.querySelector(targetSel);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const wrapper = document.getElementById('pricelist-wrapper') || targetEl;
+          wrapper.classList.remove('pricelist-highlight');
+          void wrapper.offsetWidth; // trigger reflow
+          wrapper.classList.add('pricelist-highlight');
+          setTimeout(() => wrapper.classList.remove('pricelist-highlight'), 1500);
+        }
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        stopTimer();
+        bar.style.display = 'none';
+      });
+    }
+
+    showSlide(0);
+    startTimer();
+  })();
+
   // Marquee pause control (accessibility)
   const marquee = document.getElementById('marquee');
   const marqueeToggle = document.getElementById('marquee-toggle');
@@ -296,6 +498,12 @@ function initApp() {
     if (!root) return;
 
     const ITEMS = [
+      {
+        src: 'assets/images/pggm-cup-2026.jpg',
+        badge: '22–28 Nov 2026 · Hadiah Rp50 Juta',
+        title: 'PGGM CUP 2026 — Natal & Tahun Baru',
+        desc: 'Turnamen mini soccer antar denominasi gereja se-Kabupaten Mimika di Goldstone Arena. Kuota terbatas 24 tim!'
+      },
       {
         src: 'assets/images/img_4.jpg',
         badge: 'Tuan Rumah Resmi',

@@ -231,3 +231,54 @@
     @media (prefers-reduced-motion: reduce) {
       .circular-carousel__stage { transition: none; }
     }
+
+    /* Top Promo Bar & Pricelist Flash Highlight */
+    @keyframes promoSlideIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .promo-slide.is-active {
+      display: block;
+      animation: promoSlideIn 320ms cubic-bezier(.22, 1, .36, 1);
+    }
+    @keyframes pricelistPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 58, 0); }
+      35%      { box-shadow: 0 0 0 6px rgba(201, 162, 58, 0.45); }
+    }
+    .pricelist-highlight {
+      animation: pricelistPulse 1.4s ease-out;
+      border-color: #C9A23A !important;
+    }
+
+    /* Native Modal Dialog (Promo & Event Poster Popup) */
+    dialog:modal {
+      overscroll-behavior: contain;
+    }
+    dialog::backdrop {
+      overflow: hidden;
+      overscroll-behavior: contain;
+      background-color: rgba(11, 12, 9, 0.8);
+      backdrop-filter: blur(6px);
+    }
+    @keyframes modalPopIn {
+      from { opacity: 0; transform: scale(0.96) translateY(10px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    dialog.promo-dialog[open] {
+      animation: modalPopIn 280ms cubic-bezier(.22, 1, .36, 1);
+    }
+    .promo-heading {
+      font-size: clamp(2.25rem, 1.5rem + 2.5vw, 3.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+    .promo-prize {
+      font-size: clamp(2rem, 1.35rem + 2.2vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .promo-body {
+      line-height: 1.6;
+      text-wrap: pretty;
+    }
